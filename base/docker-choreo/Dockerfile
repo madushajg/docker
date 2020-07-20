@@ -33,6 +33,7 @@ RUN mkdir -p /ballerina/files \
     && mv /ballerina/ballerina* /ballerina/runtime \
     && mkdir -p /ballerina/runtime/logs \
     && chown -R ballerina:troupe /ballerina \
+    && chmod 755 /ballerina/runtime/bin/ballerina \
     && rm -rf /root/${BALLERINA_DIST} > /dev/null 2>&1 \
     && rm -rf /var/cache/apk/*
 
